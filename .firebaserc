@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "lavenirtest": {
+      "hosting": {
+        "app": [
+          "lavenirtest"
+        ]
+      }
+    }
+  }
+}

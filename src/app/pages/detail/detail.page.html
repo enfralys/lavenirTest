@@ -1,0 +1,163 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-button slot="start" (click)="easyBack()">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
+        <ion-button slot="end">
+            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+        </ion-button>
+        <ion-title>DONATE</ion-title>
+
+
+    </ion-toolbar>
+
+    <ion-toolbar class="ion-text-center with-shadow">
+        <ion-title class="bigfont">Make a donation to</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullScreen>
+
+    <ion-card *ngIf="pokemon">
+        <div class="grid">
+
+            <div class="image">
+                <img [src]="pokemon.image" alt="Name" width="100px">
+            </div>
+
+            <h4 *ngIf="pokemon" class="text-center">{{pokemon.name}}</h4>
+            <p>{{ pokemon.description }}</p>
+        </div>
+
+        <ion-grid class="ion-padding">
+            <ion-row class="ion-justify-content-center">
+
+                <div class="attack-btn">
+                    <ion-button>NEW ATTACK</ion-button>
+                    <ion-label>58000</ion-label>
+                    <ion-label>50</ion-label>
+                </div>
+
+            </ion-row>
+
+            <!-- Start row -->
+            <h1 class="header-line">Tipo</h1>
+
+            <ion-row class="ion-justify-content-around">
+                <ion-col class="data" size="9">
+                    <div class="icon">
+
+                    </div>
+                    <div class="text">
+                        F
+                    </div>
+                </ion-col>
+
+                <ion-col class="ion-text-end">
+                    15
+                </ion-col>
+
+            </ion-row>
+            <ion-row class="ion-justify-content-around">
+                <ion-col class="data" size="9">
+                    <div class="icon">
+
+                    </div>
+                    <div class="text">
+                        Ancient Power
+                    </div>
+                    <div class="power__bars">
+                        <div class="power__bar"></div>
+                        <div class="power__bar"></div>
+                        <div class="power__bar"></div>
+                    </div>
+                </ion-col>
+
+                <ion-col class="ion-text-end">
+                    15
+                </ion-col>
+
+            </ion-row>
+            <!-- End row -->
+
+            <!-- Start row -->
+            <h1 class="header-line">Estadisticas</h1>
+
+            <ion-row class="ion-justify-content-around">
+                <ion-col class="data" size="9">
+                    <div class="icon">
+
+                    </div>
+                    <div class="text">
+                        Peso
+                    </div>
+                </ion-col>
+
+                <ion-col class="ion-text-end">
+                    15
+                </ion-col>
+
+            </ion-row>
+            <ion-row class="ion-justify-content-around">
+                <ion-col size="9">
+                    <div class="data">
+                        <div class="icon">
+
+                        </div>
+                        <div class="text">
+                            Ancient Power
+                        </div>
+                        <div class="power__bars">
+                            <div class="power__bar power__bar--large"></div>
+                            <div class="power__bar"></div>
+                        </div>
+                    </div>
+                    <div class="data-other">
+                        <div class="info">
+                            <div class="icon-star"></div>
+                            <div class="text">1</div>
+                        </div>
+                        <div class="info">
+                            <div class="icon-star"></div>
+                            <div class="text">1</div>
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col class="ion-text-end">
+                    15
+                </ion-col>
+
+            </ion-row>
+            <!-- End row -->
+
+        </ion-grid>
+        <!-- 
+             <ul>
+                    <h3>Poder Base</h3>
+                    <li *ngFor="let item of pokemon.stats">
+                        {{item.stat.name}} = {{item.base_stat}}
+                    </li>
+                </ul>
+            <ul>
+            <h3>Poder Base</h3>
+            <li *ngFor="let item of pokemon.stats">
+                {{item.stat.name}} = {{item.base_stat}}
+            </li>
+        </ul>
+    
+        <ul>
+            <h3>Habilidad</h3>
+            <li *ngFor="let item of pokemon.abilities">
+                {{item.ability.name}}
+            </li>
+        </ul>
+        <p>Peso : {{pokemon.weight}}</p> -->
+    </ion-card>
+
+
+</ion-content>
+<ion-fab vertical="bottom">
+    <ion-button style="margin-top: 10px;" (click)="easyBack()">Volver</ion-button>
+
+</ion-fab>

@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-button slot="end">
+            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+        </ion-button>
+        <ion-title>BUSCAR POKEMON</ion-title>
+
+    </ion-toolbar>
+    <ion-searchbar (ionChange)="searchName($event.target.value)" debounce="500"></ion-searchbar>
+
+</ion-header>
+
+<ion-content fullScreen>
+
+    <ion-list lines="none">
+
+        <!-- If empty response or error -->
+        <ion-card *ngIf="error">
+            <ion-item>
+                <ion-thumbnail slot="start">
+                    <img src="https://e7.pngegg.com/pngimages/645/290/png-clipart-pokemon-go-ash-ketchum-snorlax-pikachu-pokemon-go-mammal-carnivoran.png" alt="Name">
+                </ion-thumbnail>
+
+                <div class="grid">
+                    <div class="info info--no-border">
+                        <h2 class="ion-text-capitalize">¡Lo sentimos!</h2>
+                        <p>No hemos podido encontrar este pokemon</p>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-card>
+
+        <!-- Start pokemons cards -->
+        <ion-card *ngFor="let pokemon of pokemons" (click)="getDetailPokemon(pokemon)">
+            <ion-item>
+                <ion-thumbnail slot="start">
+                    <img [src]="pokemon.image" alt="Name">
+                </ion-thumbnail>
+
+                <div class="grid">
+                    <div class="info">
+                        <h2 class="ion-text-capitalize">{{pokemon.name}}</h2>
+                        <p>{{ pokemon.description }}</p>
+                    </div>
+                    <div class="details">
+                        <ion-icon name="alert-circle"></ion-icon>
+                        <ion-progress-bar color="primary" [value]="pokemon.base_happiness / 100"></ion-progress-bar>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-card>
+        <!-- End pokemons cards -->
+
+    </ion-list>
+</ion-content>

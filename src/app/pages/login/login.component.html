@@ -1,0 +1,58 @@
+<ion-content fullScreen>
+
+    <div class="ion-padding vertical-center">
+        <ion-grid>
+
+            <ion-row class="ion-justify-content-center ion-align-items-center ion-padding-bottom">
+                <ion-img src="https://www.lavenir.com.co/wp-content/uploads/elementor/thumbs/logo-lavenir-blanco-1-ozo6xtdssiuhkoyrog5di2j7djqnxcwkl3dpajaiuy.png">
+                </ion-img>
+            </ion-row>
+
+            <ion-row class="ion-justify-content-center ion-align-items-center ion-padding">
+                <div class="google-btn" (click)="loginGoogle()">
+                    <div class="google-icon-wrapper">
+                        <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google logo" />
+                    </div>
+                    <p class="btn-text"><b>Sign up with Google</b></p>
+                </div>
+            </ion-row>
+
+            <ion-row>
+                <ion-col>
+                    <ion-list lines="none" class="formitems">
+                        <ion-item>
+                            <ion-label for="username" class="ion-text-wrap login-label" position="floating">
+                                Username</ion-label>
+                            <ion-input name="username" id="username" type="text" [(ngModel)]="credentials.text" required>
+                            </ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label for="password" class="ion-text-wrap  login-label" position="floating">
+                                Password
+                            </ion-label>
+                            <ion-input name="password" id="password" type="password" [(ngModel)]="credentials.password" required>
+                            </ion-input>
+                        </ion-item>
+                        <ion-item class="ion-text-center">
+                            <ion-label class="password-recover">Forgot Password?</ion-label>
+                        </ion-item>
+                        <ion-item class="ion-text-center">
+                            <div class="btn " (click)="login()">
+                                <ion-button>Iniciar sesión</ion-button>
+                            </div>
+                        </ion-item>
+
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+
+
+        </ion-grid>
+
+    </div>
+
+
+
+
+</ion-content>

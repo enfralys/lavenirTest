@@ -1,0 +1,150 @@
+ion-img {
+    width: 70%;
+}
+
+ion-button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.vertical-center {
+    display: flex !important;
+    align-items: center !important;
+    align-content: center !important;
+    height: calc(100vh - 56px);
+    overflow-y: hidden;
+}
+
+ion-content {
+    height: calc(100vh - 56px);
+    --background: #4dd6c1;
+}
+
+ion-grid {
+    --ion-grid-column-padding: 5px;
+}
+
+ion-icon {
+    font-size: 56px;
+}
+
+ion-item {
+    --background: #4dd6c1;
+    --highlight-color-invalid: none;
+    --highlight-color-valid: none;
+}
+
+ion-input {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    overflow: hidden;
+    border-radius: 50px;
+    margin-top: -5px;
+    border: 1px solid #B3B3B3;
+}
+
+ion-label.login-label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding-left: 25px;
+}
+
+ion-icon.iconppz {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 150px;
+}
+
+form.formlogin {
+    width: 80%;
+}
+
+ion-col {
+    background-color: #4dd6c1;
+    --ion-grid-column-padding: 1rem 1rem 1rem 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+ion-list.formitems {
+    background: transparent;
+    ion-item {
+        color: white;
+        padding: 0 1rem;
+        ion-label {
+            color: white;
+            z-index: 10;
+        }
+        ion-input {
+            border-color: white;
+            background-color: #17af91;
+            --padding-end: 10px;
+            --padding-start: 20px;
+        }
+    }
+}
+
+.password-recover {
+    font-size: 12px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    ion-button {
+        height: 34px;
+        --border-radius: 10rem;
+        width: 160px;
+        font-size: 14px;
+    }
+}
+
+///Google button
+$white: #fff;
+$google-blue: #4285f4;
+$button-active-blue: #1669F2;
+.google-btn {
+    width: 100%;
+    height: 50px;
+    background-color: $google-blue;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .25);
+    display: grid;
+    grid-template-columns: 48px auto;
+    .google-icon-wrapper {
+        position: relative;
+        margin-top: 1px;
+        margin-left: 1px;
+        width: 48px;
+        height: 48px;
+        border-radius: 2px;
+        background-color: $white;
+        display: flex;
+    }
+    .google-icon {
+        margin: auto;
+        width: 22px;
+        height: 22px;
+    }
+    .btn-text {
+        grid-column: 2/3;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        color: $white;
+        font-size: 16px;
+        letter-spacing: 0.2px;
+        font-family: "Open Sans";
+    }
+    &:hover {
+        box-shadow: 0 0 6px $google-blue;
+    }
+    &:active {
+        background: $button-active-blue;
+    }
+}
+
+////

@@ -1,0 +1,7 @@
+{
+  "name": "lavenir_test",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

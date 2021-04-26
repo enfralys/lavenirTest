@@ -1,0 +1,237 @@
+.header-ios>ion-toolbar {
+    &:last-of-type {
+        --border-width: 0;
+    }
+}
+
+ion-toolbar {
+    --background: #4dd6c1;
+    &.with-shadow {
+        box-shadow: 0px 8px 8px 0px rgba(77, 214, 193, 0.6);
+    }
+    ion-button {
+        --background: transparent !important;
+        --box-shadow: none;
+        ion-icon {
+            color: #fff;
+        }
+    }
+    ion-title {
+        color: #fff;
+    }
+}
+
+.bigfont {
+    font-size: 20px;
+}
+
+ion-fab {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    ion-button {
+        width: 80%;
+        --background: #4dd6c1;
+        --border-radius: 20px;
+    }
+}
+
+ion-item {
+    ion-label {
+        h2 {
+            color: #4dd6c1;
+            font: 20px;
+        }
+    }
+}
+
+ion-content {
+    --background: #d2d9e2;
+    ion-card {
+        height: 100%;
+        margin: 0 16px;
+        background-color: white;
+        border-radius: 0;
+        box-shadow: 0px 10px 8px -9px rgba(0, 0, 0, 0.75);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .image {
+            background-color: #4dd6c1;
+            margin-top: 30px;
+            border-radius: 24px;
+        }
+        div {
+            h4 {
+                color: #4dd6c1;
+                text-transform: capitalize;
+            }
+        }
+        ion-grid {
+            background-color: #fafafa;
+            width: 90%;
+        }
+    }
+    ion-item {
+        position: relative;
+        ion-thumbnail {
+            height: 80px;
+            width: 80px;
+            --border-radius: 8px;
+            img {
+                background: #4dd6c1;
+            }
+        }
+    }
+}
+
+.attack-btn {
+    width: 100%;
+    margin-top: 0.2rem;
+    align-items: center;
+    display: flex;
+    border-radius: 20px 0px 0px 20px;
+    background-color: #e6eee3;
+    height: 2.5rem;
+    justify-content: space-between;
+    padding-right: 1rem;
+    font: {
+        size: 14px;
+        weight: 600;
+    }
+    ion-button {
+        height: 2.5rem;
+        --border-radius: 20px;
+        --background: #3add81;
+        --background: linear-gradient(90deg, rgba(58, 221, 129, 1) 23%, rgb(77, 214, 193) 66%);
+    }
+}
+
+.grid {
+    // border-bottom: 5px dashed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        background-image: url('../../../assets/img/dashed.png');
+        background-size: contain;
+        width: 100%;
+        height: 8px;
+    }
+    .image {
+        width: 135px;
+        justify-self: center;
+        padding: 10px;
+    }
+    p {
+        color: #000;
+        font: {
+            size: 12px;
+            weight: 600;
+        }
+        max-width: 75%;
+        text-align: center;
+        margin-block-start: 0;
+        margin-block-end: 2em;
+    }
+}
+
+//header line
+.header-line {
+    overflow: hidden;
+    font-size: 10px;
+    color: #c4d0cf;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.header-line:before,
+.header-line:after {
+    background-color: #c4d0cf;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.header-line:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.header-line:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+.ion-justify-content-around {
+    color: #000;
+    font: {
+        size: 14px;
+        weight: 600;
+    }
+}
+
+.data {
+    display: flex;
+    justify-items: flex-start;
+    .icon {
+        margin-right: .25rem;
+    }
+    .text {
+        margin-right: .5rem;
+    }
+    .power {
+        &__bars {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__bar {
+            align-self: center;
+            width: 1.5rem;
+            height: .5rem;
+            transform: skew(-20deg);
+            background: #3add81;
+            &:not(:last-child) {
+                margin-right: .15rem;
+            }
+        }
+    }
+    &-other {
+        margin-left: 1rem;
+        margin-top: .5rem;
+        .info {
+            display: flex;
+            &:not(:first-child) {
+                margin-top: .25rem;
+            }
+            .icon-star {
+                background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Star_empty.svg/471px-Star_empty.svg.png);
+                height: .75rem;
+                width: .75rem;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                filter: invert(58%) sepia(100%) saturate(295%) hue-rotate(153deg) brightness(98%) contrast(87%);
+                margin-right: .25rem;
+            }
+            .text {
+                color: #4dbdea;
+                font: {
+                    size: 12px;
+                    weight: 600;
+                }
+            }
+        }
+    }
+}
