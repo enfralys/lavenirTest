@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service'
 import { Router } from "@angular/router";
 import { LoadingController } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
     selector: 'app-search',
@@ -13,7 +14,13 @@ export class SearchComponent implements OnInit {
     error = false;
     pokemons: any = [];
 
-    constructor(public pokemonApi: PokemonService, public router: Router, public loadingController: LoadingController) {
+    constructor(
+        public pokemonApi: PokemonService,
+        public router: Router,
+        public loadingController: LoadingController,
+        private auth: AuthService
+
+    ) {
         this.getLoadPokemons();
     }
 
@@ -94,5 +101,9 @@ export class SearchComponent implements OnInit {
 
     getDetailPokemon(pokemon) {
         this.router.navigate(["/detail/" + pokemon.name]);
+    }
+
+    logOut() {
+        this.auth.SignOut();
     }
 }

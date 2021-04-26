@@ -32,7 +32,7 @@ export class AuthService {
                 .then(response => {
                     if (response.length > 0) {
                         if (response[0] == 'google.com') {
-                            this.presentToast('Este correo esta registrao gon login Social Google')
+                            this.presentToast('Este correo esta registrado con login Social Google')
                         } else {
                             this.afAuth.signInWithEmailAndPassword(user.email, user.password)
                                 .then((resp) => {
@@ -87,7 +87,7 @@ export class AuthService {
 
     get isLoggedIn(): boolean {
         const user = JSON.parse(localStorage.getItem('user'));
-        return (user !== null && user.emailVerified !== false) ? true : false;
+        return (user !== null) ? true : false;
     }
 
 

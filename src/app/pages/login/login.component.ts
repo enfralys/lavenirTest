@@ -41,7 +41,11 @@ export class LoginComponent implements OnInit {
         }
         this.auth.createUser(user).then((res) => {
             if (res) {
-                this.router.navigate(["/search"]);
+                this.auth.setLocalstorage()
+                setTimeout(() => {
+                    this.router.navigate(["/search"]);
+
+                }, 1000);
             }
 
         });

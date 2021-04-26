@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar>
-        <ion-button slot="end">
-            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+        <ion-button slot="end" (click)="logOut()">
+            Salir
         </ion-button>
         <ion-title>BUSCAR POKEMON</ion-title>
 
@@ -18,7 +18,8 @@
         <ion-card *ngIf="error">
             <ion-item>
                 <ion-thumbnail slot="start">
-                    <img src="https://e7.pngegg.com/pngimages/645/290/png-clipart-pokemon-go-ash-ketchum-snorlax-pikachu-pokemon-go-mammal-carnivoran.png" alt="Name">
+                    <img src="https://e7.pngegg.com/pngimages/645/290/png-clipart-pokemon-go-ash-ketchum-snorlax-pikachu-pokemon-go-mammal-carnivoran.png"
+                        alt="Name">
                 </ion-thumbnail>
 
                 <div class="grid">
